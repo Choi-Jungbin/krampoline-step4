@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: my-app-container-env
-          image: krmp-d2hub-idock.9rum.cc/dev-test/repo_cc7b43225a83
+          image: krmp-d2hub-idock.9rum.cc/dev-test/repo_9ed11e0c70e6
           env:
             - name: GOOGLE_CLIENT_ID
               valueFrom:
@@ -27,3 +27,13 @@ spec:
                 secretKeyRef:
                   name: my-secret
                   key: google_client_secret
+            - name: DATABASE_USER
+              valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: db_user
+            - name: DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: db_password
