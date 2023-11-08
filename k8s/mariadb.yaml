@@ -19,7 +19,10 @@ spec:
         image: krmp-d2hub-idock.9rum.cc/dev-test/repo_cf9b9e0e64bf
         env:
         - name: MARIADB_ROOT_PASSWORD
-          value: root
+          valueFrom:
+            secretKeyRef:
+              name: my-secret
+              key: db_password
         - name: MARIADB_DATABASE
           value: krampoline
         - name: MARIADB_DISABLE_UPGRADE_BACKUP
