@@ -18,7 +18,7 @@ spec:
       containers:
         - name: mysql
           # 여러분의 디비 이미지 주소
-          image: mysql/mysql-server:8.0.26
+          image: mysql/mysql-server:8.0.28
           env:
             - name: TZ
               value: Asia/Seoul
@@ -32,9 +32,6 @@ spec:
             - name: MYSQL_DISABLE_UPGRADE_BACKUP
               value: '1'
           volumeMounts:
-            # - mountPath: /var/lib/mysql
-            #   name: data
-            #   subPath: mysql
             - mountPath: /docker-entrypoint-initdb.d
               name: init-db
           resources:
