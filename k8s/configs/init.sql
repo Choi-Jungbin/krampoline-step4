@@ -6,6 +6,21 @@ FLUSH PRIVILEGES;
 
 USE `krampoline`;
 
+-- 외래키 체크 설정 해제
+SET foreign_key_checks = 0;
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS rewards;
+DROP TABLE IF EXISTS progresses;
+DROP TABLE IF EXISTS titles;
+DROP TABLE IF EXISTS collections;
+DROP TABLE IF EXISTS albums;
+DROP TABLE IF EXISTS album_pages;
+DROP TABLE IF EXISTS album_images;
+DROP TABLE IF EXISTS album_members;
+DROP TABLE IF EXISTS trashes;
+-- 외래키 체크 설정
+SET foreign_key_checks = 1;
+
 -- 유저 테이블
 CREATE TABLE users
 (
