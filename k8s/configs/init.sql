@@ -1,7 +1,7 @@
 CREATE SCHEMA IF NOT EXISTS `krampoline` DEFAULT CHARACTER SET utf8mb4;
 
 CREATE USER 'root'@'%' identified by 'root';
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' identified by 'root' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
 USE `krampoline`;
