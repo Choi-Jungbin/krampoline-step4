@@ -23,6 +23,26 @@ spec:
               value: Asia/Seoul
             - name: DATABASE_URL
               value: jdbc:mysql://mysql:3306/krampoline
+            - name: GOOGLE_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: google_client_id
+            - name: GOOGLE_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: google_client_secret
+            - name: DATABASE_USER
+              valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: db_user
+            - name: DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: db_password
           resources:
             requests:
               memory: 1Gi
