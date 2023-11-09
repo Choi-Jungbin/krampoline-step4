@@ -32,9 +32,9 @@ spec:
             - name: MYSQL_DISABLE_UPGRADE_BACKUP
               value: '1'
           volumeMounts:
-            # - mountPath: /var/lib/mysql
-            #   name: data
-            #   subPath: mysql
+            - mountPath: /var/lib/mysql
+              name: data
+              subPath: mysql
             - mountPath: /docker-entrypoint-initdb.d
               name: init-db
           resources:
