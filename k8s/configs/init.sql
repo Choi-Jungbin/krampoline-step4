@@ -118,6 +118,7 @@ CREATE TABLE album_images
     type  VARCHAR(16)  NOT NULL,
     x_size  DOUBLE  NOT NULL,
     y_size  DOUBLE  NOT NULL,
+    url VARCHAR(2056),
     create_at  DATETIME  DEFAULT CURRENT_TIMESTAMP,
     update_at  DATETIME  DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (album_page_id) REFERENCES album_pages (id)
