@@ -17,7 +17,7 @@ spec:
       containers:
         - name: backend
           # 이미지를 넣어주세요.
-          image: krmp-d2hub-idock.9rum.cc/dev-test/repo_2a3bb46519aa
+          image: krmp-d2hub-idock.9rum.cc/dev-test/repo_3ddbdfc5dd9e
           env:
             - name: TZ
               value: Asia/Seoul
