@@ -25,6 +25,16 @@ spec:
               value: jdbc:mysql://mysql:3306/krampoline
             - name: REDIRECT_URL
               value: https://k9730e4e84376a.user-app.krampoline.com
+            - name: KAKAO_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: kakao_client_id
+            - name: KAKAO_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: kakao_client_secret
             - name: GOOGLE_CLIENT_ID
               valueFrom:
                 secretKeyRef:
