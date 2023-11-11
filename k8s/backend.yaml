@@ -23,6 +23,8 @@ spec:
               value: Asia/Seoul
             - name: DATABASE_URL
               value: jdbc:mysql://mysql:3306/krampoline
+            - name: REDIS_SERVICE
+              value: redis-service
             - name: REDIRECT_URL
               value: https://k5ebddfe59255a.user-app.krampoline.com
             - name: KAKAO_CLIENT_ID
