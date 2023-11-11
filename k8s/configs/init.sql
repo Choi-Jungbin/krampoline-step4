@@ -146,3 +146,13 @@ CREATE TABLE trashes
     FOREIGN KEY (user_id) REFERENCES users (id),
     FOREIGN KEY (album_page_id) REFERENCES album_pages (id)
 );
+
+-- 에러 테이블
+CREATE TABLE error
+(
+    id  BIGINT  AUTO_INCREMENT  PRIMARY KEY,
+    massage VARCHAR(1024)   NOT NULL,
+    stack_trace VARCHAR(4096)  NOT NULL,
+    create_at  DATETIME  DEFAULT CURRENT_TIMESTAMP,
+    update_at  DATETIME  DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
