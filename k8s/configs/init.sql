@@ -158,7 +158,7 @@ CREATE TABLE error
 );
 
 -- 유저
-INSERT INTO users (`email`, `nickname`, `title`, `image`, `user_role`, `create_at`) VALUES ('admin', 'admin', '내가 관리자라니!!', '이미지', 'ROLE_ADMIN', '2023-08-29 13:54:19.823');
+INSERT INTO users (`email`, `nickname`, `title`, `image`, `user_role`) VALUES ('admin', 'admin', '내가 관리자라니!!', '이미지', 'ROLE_ADMIN');
 
 -- 도전과제
 INSERT INTO rewards (`reward_name`, `description`, `reward_level`, `goal_count`) VALUES ('어드민 유저가 뭔데?', '관리자가 되어보세요.', 'challenger', '10000000');
@@ -179,5 +179,5 @@ INSERT INTO titles (`title_name`, `reward_id`) VALUES ('추억 앨범 관리자'
 INSERT INTO titles (`title_name`, `reward_id`) VALUES ('방문객', '3');
 
 -- 칭호 획득
-INSERT INTO collections (`create_at`, `user_id`, `title_id`) VALUES ('2023-08-29 13:54:19.823', '1', '1');
-INSERT INTO collections (`create_at`, `user_id`, `title_id`) VALUES ('2023-08-29 13:54:19.823', '1', '3');
+INSERT INTO collections (`user_id`, `title_id`) VALUES ('1', '1');
+INSERT INTO collections (`user_id`, `title_id`) VALUES ('1', '3');
