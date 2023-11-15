@@ -27,7 +27,7 @@ CREATE TABLE users
     id  BIGINT  AUTO_INCREMENT  PRIMARY KEY,
     email  VARCHAR(128)  NOT NULL  UNIQUE,
     nickname  VARCHAR(32)  NOT NULL,
-    title  VARCHAR(16),
+    title  VARCHAR(128),
     image  VARCHAR(512)  NOT NULL,
     user_role  VARCHAR(16)  NOT NULL,
     create_at  DATETIME  DEFAULT CURRENT_TIMESTAMP,
@@ -64,7 +64,7 @@ CREATE TABLE progresses
 CREATE TABLE titles
 (
     id  BIGINT  AUTO_INCREMENT  PRIMARY KEY,
-    title_name  VARCHAR(16)  NOT NULL,
+    title_name  VARCHAR(128)  NOT NULL,
     reward_id  BIGINT,
     create_at  DATETIME  DEFAULT CURRENT_TIMESTAMP,
     update_at  DATETIME  DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -87,7 +87,7 @@ CREATE TABLE collections
 CREATE TABLE albums
 (
     id  BIGINT  AUTO_INCREMENT  PRIMARY KEY,
-    album_name  VARCHAR(32)  NOT NULL,
+    album_name  VARCHAR(128)  NOT NULL,
     description  VARCHAR(512)  NOT NULL,
     image  VARCHAR(512)  NOT NULL,
     category  VARCHAR(16)  NOT NULL,
