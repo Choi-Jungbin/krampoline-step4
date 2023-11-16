@@ -28,7 +28,7 @@ spec:
             - name: ALLOWED_ORIGIN
               value: "*"
             - name: REDIRECT_URL
-              value: https://k56b28d9d3ecca.user-app.krampoline.com/
+              value: https://k56b28d9d3ecca.user-app.krampoline.com
             - name: KAKAO_CLIENT_ID
               valueFrom:
                 secretKeyRef:
